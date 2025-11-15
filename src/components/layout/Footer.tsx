@@ -17,7 +17,7 @@ const Footer = () => {
                 className="h-8 w-auto"
               />
               <span className="text-xl font-bold bg-gradient-cyber bg-clip-text text-transparent">
-                AI Hunter Sentinel
+                Nyx Systems LLC
               </span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
@@ -59,22 +59,18 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center text-muted-foreground">
                 <Mail className="h-4 w-4 mr-2 text-primary" />
-                info@aihuntersentinel.com
-              </li>
-              <li className="flex items-center text-muted-foreground">
-                <Phone className="h-4 w-4 mr-2 text-primary" />
-                +1 (555) 123-4567
+                nyxsystemsllc@gmail.com
               </li>
               <li className="flex items-center text-muted-foreground">
                 <MapPin className="h-4 w-4 mr-2 text-primary" />
-                Miami, FL
+                Miami, FL 33177
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2025 AI Hunter Sentinel. All rights reserved.</p>
+          <p>&copy; 2025 Nyx Systems LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -7,114 +7,146 @@ import { Check, Shield, Zap, Crown } from "lucide-react";
 const Subscription = () => {
   const plans = [
     {
-      name: "Basic Protection",
-      price: "$4.99",
+      name: "HSIP Basic",
+      price: "$99.99",
       period: "/month",
-      description: "Essential AI cybersecurity for small businesses",
+      description: "Entry-level HSIP features for future small-business plans",
       icon: <Shield className="h-8 w-8 text-primary" />,
       features: [
-        "AI Threat Detection",
-        "Real-time Monitoring",
-        "Email Alerts",
-        "Basic Reporting",
-        "3 Devices Coverage"
+        "HSIP Identity",
+        "Consent-Based Sessions",
+        "Replay & Abuse Guard",
+        "Basic Logs & Reports",
+        "3 Devices Coverage",
       ],
       popular: false,
-      buttonText: "Get Started"
+      buttonText: "Coming Soon",
     },
     {
-      name: "Professional Shield",
-      price: "$79.99",
-      period: "/month",
-      description: "Advanced protection for growing businesses",
-      icon: <Zap className="h-8 w-8 text-secondary" />,
-      features: [
-        "Everything in Basic + Centralized Dashboard",
-        "Easy Team Onboarding",
-        "Advanced AI Analytics",
-        "24/7 Phone Support",
-        "Custom Reports",
-        "10 Devices Coverage",
-        "Priority Response"
-      ],
-      popular: true,
-      buttonText: "Most Popular"
-    },
-    {
-      name: "Enterprise Fortress",
+      name: "HSIP Professional",
       price: "$199.99",
       period: "/month",
-      description: "Complete cybersecurity suite for enterprises",
+      description: "Pro tier for companies needing advanced HSIP controls",
+      icon: <Zap className="h-8 w-8 text-secondary" />,
+      features: [
+        "Everything in Basic",
+        "Centralized Admin Panel",
+        "Team Identity Enrollment",
+        "Advanced Consent Rules",
+        "Custom Logging Policies",
+        "10 Devices Coverage",
+        "Priority Support",
+      ],
+      popular: true,
+      buttonText: "Coming Soon",
+    },
+    {
+      name: "HSIP Enterprise",
+      price: "$499.99",
+      period: "/month",
+      description: "Enterprise-grade HSIP with deep integration options",
       icon: <Crown className="h-8 w-8 text-primary" />,
       features: [
         "Everything in Professional",
-        "Dedicated AI Analyst",
-        "Custom Integration",
+        "Dedicated HSIP Engineer",
+        "Custom Integrations",
         "Unlimited Devices",
-        "White-label Reporting",
+        "Compliance-Ready Logs",
         "SLA Guarantee",
-        "On-site Training",
-        "50 to 80 devices Coverage"
+        "Private Deployment Options",
       ],
       popular: false,
-      buttonText: "Contact Sales"
-    }
+      buttonText: "Coming Soon",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-hero">
+
+      {/* STATUS MESSAGE */}
+      <section className="pt-24 pb-8 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            HSIP Subscriptions are Paused
+          </h1>
+
+          <p className="text-lg text-muted-foreground mb-3">
+            We’re currently focused on delivering a rock-solid free HSIP MVP for
+            individuals.  
+            Paid HSIP business tiers will reopen **after the MVP has shipped
+            and been tested by early users**.
+          </p>
+
+          <p className="text-sm text-muted-foreground">
+            You can already try the{" "}
+            <a
+              href="/download"
+              className="text-primary underline underline-offset-4"
+            >
+              free HSIP Windows build
+            </a>{" "}
+            while we finish the subscription backend.
+          </p>
+        </div>
+      </section>
+
+      {/* HERO */}
+      <section className="pb-16 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-foreground">Choose Your</span>
-              <span className="bg-gradient-cyber bg-clip-text text-transparent ml-4">
-                Protection Level
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              <span className="text-foreground">Future Plans for</span>
+              <span className="bg-gradient-cyber bg-clip-text text-transparent ml-2">
+                HSIP Business
               </span>
-            </h1>
+            </h2>
             <p className="text-xl text-muted-foreground">
-              Flexible cybersecurity plans powered by AI to fit your organization's needs
+              These tiers preview features that will be available for
+              organizations once HSIP enters full production.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* PRICING PREVIEW */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <p className="text-sm text-muted-foreground">
+              These HSIP plans are **not yet active**.  
+              This page is a preview for future business customers.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`relative bg-card border-border hover:shadow-cyber transition-all duration-300 ${
-                  plan.popular ? 'border-primary shadow-glow-primary scale-105' : ''
+                  plan.popular
+                    ? "border-primary shadow-glow-primary scale-105"
+                    : ""
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Future Most Popular
                     </span>
                   </div>
                 )}
-                
+
                 <CardHeader className="text-center pb-4">
                   <div className="mb-4 flex justify-center">
-                    <div className="p-3 bg-muted rounded-lg">
-                      {plan.icon}
-                    </div>
+                    <div className="p-3 bg-muted rounded-lg">{plan.icon}</div>
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">
                     {plan.name}
                   </CardTitle>
-                  <p className="text-muted-foreground">
-                    {plan.description}
-                  </p>
+                  <p className="text-muted-foreground">{plan.description}</p>
                 </CardHeader>
-                
+
                 <CardContent className="pt-4">
                   <div className="text-center mb-6">
                     <div className="flex items-baseline justify-center">
@@ -126,26 +158,34 @@ const Subscription = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-muted-foreground">
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-muted-foreground"
+                      >
                         <Check className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  
-                  <Button 
-                    className={`w-full ${
-                      plan.popular 
-                        ? 'bg-gradient-primary hover:shadow-glow-primary' 
-                        : 'bg-gradient-secondary hover:shadow-glow-secondary'
+
+                  <Button
+                    className={`w-full cursor-not-allowed opacity-60 ${
+                      plan.popular
+                        ? "bg-gradient-primary hover:shadow-none"
+                        : "bg-gradient-secondary hover:shadow-none"
                     } transition-all duration-300`}
                     size="lg"
+                    disabled
                   >
                     {plan.buttonText}
                   </Button>
+
+                  <p className="mt-2 text-xs text-center text-muted-foreground">
+                    HSIP subscriptions will launch after the MVP phase.
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -153,95 +193,26 @@ const Subscription = () => {
         </div>
       </section>
 
-      {/* Features Comparison */}
-      <section className="py-20 bg-card/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why AI Hunter Sentinel?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Advanced AI cybersecurity features that adapt and evolve with emerging threats
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <div className="p-4 bg-primary/10 rounded-full">
-                  <Shield className="h-12 w-12 text-primary" />
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                99.9% Detection Rate
-              </h3>
-              <p className="text-muted-foreground">
-                Industry-leading AI accuracy in threat identification
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <div className="p-4 bg-secondary/10 rounded-full">
-                  <Zap className="h-12 w-12 text-secondary" />
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                Real-time Response
-              </h3>
-              <p className="text-muted-foreground">
-                Instant threat neutralization and protection
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <div className="p-4 bg-primary/10 rounded-full">
-                  <Crown className="h-12 w-12 text-primary" />
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                Enterprise Grade
-              </h3>
-              <p className="text-muted-foreground">
-                Scalable solutions for organizations of all sizes
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <div className="p-4 bg-secondary/10 rounded-full">
-                  <Check className="h-12 w-12 text-secondary" />
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                Proven Results
-              </h3>
-              <p className="text-muted-foreground">
-                Powered by devs, trusted by users
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-20 bg-gradient-cyber">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-background mb-6">
-            Start Your Protection Today
+            Start with HSIP Today
           </h2>
           <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
-            Don't wait for a cyber attack. Protect your organization with AI Hunter Sentinel starting at just $4.99/month
+            While business plans are paused, you can already begin using HSIP
+            and testing the free MVP.
           </p>
-          <Button 
-            size="lg" 
-            variant="secondary"
-            className="bg-background text-primary hover:bg-background/90 shadow-lg"
-          >
-            Get Started Now
-            <Shield className="h-5 w-5 ml-2" />
-          </Button>
+          <a href="/download" className="inline-flex">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-background text-primary hover:bg-background/90 shadow-lg"
+            >
+              Download HSIP for Windows
+              <Shield className="h-5 w-5 ml-2" />
+            </Button>
+          </a>
         </div>
       </section>
 

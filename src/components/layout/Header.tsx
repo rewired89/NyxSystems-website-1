@@ -30,7 +30,7 @@ const Header = () => {
               className="h-10 w-auto"
             />
             <span className="text-xl font-bold bg-gradient-cyber bg-clip-text text-transparent">
-              AI Hunter Sentinel
+              Nyx Systems LLC
             </span>
           </Link>
 
